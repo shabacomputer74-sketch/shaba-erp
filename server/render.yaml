@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: shaba-erp-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: shaba-erp-db
+          property: connectionString
+      - key: SHABA_DATA_DIR
+        value: /tmp/shaba-data
+
+databases:
+  - name: shaba-erp-db
+    databaseName: shaba_erp
+    user: shaba_erp

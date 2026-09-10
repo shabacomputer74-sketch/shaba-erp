@@ -1,0 +1,16 @@
+{
+  "name": "shaba-computer-erp-portable",
+  "version": "1.0.0",
+  "description": "SHABA COMPUTER ERP - Portable local-data edition",
+  "main": "main.js",
+  "author": "SHABA COMPUTER",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . \"SHABA COMPUTER ERP\" --platform=win32 --arch=x64 --out=dist --overwrite --asar"
+  },
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-packager": "^19.1.0"
+  }
+}
